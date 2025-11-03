@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+
+{% block title %}All Posts - BOOTCAMP Blog{% endblock %}
+
+{% block content %}
+<section class="all-posts-section">
+    <h2>All Blog Posts</h2>
+    
+    <div class="posts-grid">
+        {% for blog in blogs %}
+        <article class="blog-card">
+            <h3>Blog Post {{ forloop.counter }}</h3>
+            <p>{{ blog }}</p>
+        </article>
+        {% endfor %}
+    </div>
+
+    <h2>All Images</h2>
+    
+    <div class="images-grid">
+        {% for image in images %}
+        <div class="image-card">
+            <img src="{{ image }}" alt="Image {{ forloop.counter }}">
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

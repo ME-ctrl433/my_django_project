@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+
+{% block title %}About -  Blog{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-content">
+        <h2>About Me</h2>
+        <div class="about-card">
+            <h3>{{ name }}</h3>
+            <p>{{ bio }}</p>
+            <p>I am currently learning Django and building web applications to deepen my understanding of web development frameworks. This BOOTCAMP project is part of my journey to master Django development.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Blog{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<header>
+    <div>
+      <navbar>
+            <li><a href="{% url 'blog' %}">Home</a></li>
+            <li><a href="{% url 'show_all' %}">All Posts</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+                
+      </navbar>
+    </div>
+</header>
+
+    <main>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BOOTCAMP. All rights reserved.</p>
+    </footer>
+</body>
+</html>

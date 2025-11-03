@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Home - Blog{% endblock %}
+
+{% block content %}
+<section class="blog-section">
+    <article class="blog-post">
+        <h2>Blog Post</h2>
+        <div class="blog-image">
+            <img src="{{ image }}" alt="Blog Image">
+        </div>
+        <div class="blog-content">
+            <p>{{ blog }}</p>
+        </div>
+        <a href="{% url 'blog' %}" class="btn">Load Another Post</a>
+    </article>
+</section>
+{% endblock %}
